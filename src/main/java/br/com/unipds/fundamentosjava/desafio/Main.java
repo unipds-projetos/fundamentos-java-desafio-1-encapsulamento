@@ -5,22 +5,22 @@ public class Main {
 
         System.out.println("--- Criando Produtos e Alterando Atributos ---");
 
-        Produto produto1 = new Produto(101, "Caneta Azul", 1.50, 100);
+        Produto produto1 = Produto.criarProduto(101, "Caneta Azul", 1.50, 100);
         System.out.println("Produto 1 (Inicial): " + produto1);
 
-        produto1.preco = -2.00;
-        System.out.println("Produto 1 (Preço alterado): " + produto1);
+        Produto.alterarPreco(-2.00, produto1);
+        System.out.println("Produto 1 (Preço não alterado): " + produto1);
 
-        Produto produto2 = new Produto(102, "Azul Caneta", 15.00, 50);
+        Produto produto2 = Produto.criarProduto(102, "Azul Caneta", 15.00, 50);
         System.out.println("Produto 2 (Inicial): " + produto2);
 
-        produto2.quantidadeEmEstoque = -5;
-        System.out.println("Produto 2 (Estoque alterado): " + produto2);
+        Produto.alterarQuantidadeEmEstoque(-5, produto2);
+        System.out.println("Produto 2 (Estoque não alterado): " + produto2);
 
-        Produto produto3 = new Produto(103, "Borracha Branca", -0.50, 0);
+        Produto produto3 = Produto.criarProduto(103, "Borracha Branca", -0.50, 0);
         System.out.println("Produto 3 (Inicial): " + produto3);
 
-        Produto produto4 = new Produto(104, null, 10.00, 10);
+        Produto produto4 = Produto.criarProduto(104, null, 10.00, 10);
         System.out.println("Produto 4 (Inicial): " + produto4);
 
     }
